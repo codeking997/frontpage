@@ -10,13 +10,15 @@ export default function Main() {
 
     return (
 
-        <main className="bg-gray-500 flex-1 flex items-center justify-center flex-col">
-            <h1 className="mb-8 text-white font-bold">Fun facts about React</h1>
-            <ul className="list-disc marker:text-blue-500 space-y-3 text-white text-start">
+        <main className="bg-[#282D35] flex-1 flex items-center justify-center flex-col">
+            <div className="w-full max-w-2xl px-8">
+            <h1 className="mb-8 text-white text-4xl font-bold">Fun facts about React</h1>
+            <ul className="list-disc marker:text-blue-500 space-y-3 text-white  pl-4 sm:pl-5 md:pl-6">
 
                 {facts.map((fact)=> (<li key={fact}>{fact}</li>))}
 
             </ul>
+            </div>
         </main>
 
     )
