@@ -1,35 +1,23 @@
+const facts = [
+    "Was first released in 2013",
+    "Was originally created by Jordan Walke",
+    "Has well over 100k stars on GitHub",
+    "Is maintained by Facebook",
+    "Powers thousands of enterprise apps, including mobile apps",
+];
 
 export default function Main() {
 
-    return ( 
-        <>
-            <main className="bg-gray-500">
-                <h1 className="mb-8 text-white font-bold">Fun facts about React</h1>
-                <ul className="list-disc marker:text-blue-500 text-start pl-2">
+    return (
 
-                    <li className="flex items-start">
-                        <span className="text-blue-500 mr-6">•</span>
-                        <span>Was first released in 2013</span>
-                    </li>
-                    <li className="flex items-start">
-                        <span className="text-blue-500 mr-6">•</span>
-                        <span>Was originally created by Jordan Walke</span>
-                    </li>
-                    <li className="flex items-start">
-                        <span className="text-blue-500 mr-6">•</span>
-                        <span>Has well over 100k stars on GitHub</span>
-                    </li>
-                    <li className="flex items-start">
-                        <span className="text-blue-500 mr-6">•</span>
-                        <span>Is maintained by Facebook</span>
-                    </li>
-                    <li className="flex items-start">
-                        <span className="text-blue-500 mr-6">•</span>
-                        <span>Powers thousands of enterprise apps, including mobile apps</span>
-                    </li>
+        <main className="bg-gray-500 flex-1 flex items-center justify-center flex-col">
+            <h1 className="mb-8 text-white font-bold">Fun facts about React</h1>
+            <ul className="list-disc marker:text-blue-500 space-y-3 text-white text-start">
 
-                </ul>
-            </main>
-      </>
-      )
+                {facts.map((fact)=> (<li key={fact}>{fact}</li>))}
+
+            </ul>
+        </main>
+
+    )
 }
